@@ -140,11 +140,18 @@ footer {
 .footer-logo-link {
   display: block;
   border-radius: 12px;
+  background: transparent;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .footer-logo-link:focus-visible {
   outline: 3px solid var(--ink);
   outline-offset: 5px;
+}
+
+.footer-logo-link:active {
+  background: transparent;
 }
 
 @media (max-width: 680px) {
