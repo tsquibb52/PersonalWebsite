@@ -15,6 +15,7 @@
 
 html {
   background: var(--paper);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -24,7 +25,8 @@ body {
 }
 
 header,
-main {
+main,
+footer {
   width: min(calc(100% - 80px), 1240px);
   margin: 0 auto;
 }
@@ -69,7 +71,7 @@ h1 {
 }
 
 main {
-  padding-bottom: 96px;
+  padding-bottom: 72px;
 }
 
 .project {
@@ -122,9 +124,33 @@ h2::after {
   outline-offset: 6px;
 }
 
+footer {
+  display: grid;
+  padding: 52px 0 64px;
+  place-items: center;
+  border-top: 1px solid var(--line);
+}
+
+.footer-logo {
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+
+.footer-logo-link {
+  display: block;
+  border-radius: 12px;
+}
+
+.footer-logo-link:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 5px;
+}
+
 @media (max-width: 680px) {
   header,
-  main {
+  main,
+  footer {
     width: calc(100% - 36px);
   }
 
@@ -156,4 +182,19 @@ h2::after {
     box-shadow: 0 10px 30px rgba(31, 28, 20, 0.06);
   }
 
+  footer {
+    padding: 38px 0 44px;
+  }
+
+  .footer-logo {
+    width: 54px;
+    height: 54px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
