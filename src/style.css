@@ -1,0 +1,159 @@
+:root {
+  font-family: "Manrope", Arial, sans-serif;
+  color: #171714;
+  background: #e7eceb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --ink: #171714;
+  --paper: #e7eceb;
+  --line: rgba(23, 23, 20, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--paper);
+}
+
+header,
+main {
+  width: min(calc(100% - 80px), 1240px);
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  padding: 54px 0 100px;
+  border-top: 1px solid var(--line);
+  margin-top: 32px;
+}
+
+header::after {
+  position: absolute;
+  right: 0;
+  bottom: 55px;
+  left: 0;
+  height: 1px;
+  background: var(--line);
+  content: "";
+}
+
+header h1 {
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0 32px;
+  background: var(--paper);
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+h1 {
+  font-size: clamp(48px, 6.5vw, 88px);
+  line-height: 0.95;
+}
+
+main {
+  padding-bottom: 96px;
+}
+
+.project {
+  margin-bottom: 92px;
+}
+
+.project:last-child {
+  margin-bottom: 0;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 22px;
+  font-size: clamp(25px, 2.4vw, 34px);
+  line-height: 1.1;
+  text-align: center;
+}
+
+h2::before,
+h2::after {
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+  content: "";
+}
+
+.project a {
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(23, 23, 20, 0.14);
+  border-radius: 12px;
+  background: #e7e5df;
+  box-shadow: 0 18px 48px rgba(31, 28, 20, 0.07);
+}
+
+.project img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.84 / 1;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.project a:focus-visible {
+  outline: 3px solid #191919;
+  outline-offset: 6px;
+}
+
+@media (max-width: 680px) {
+  header,
+  main {
+    width: calc(100% - 36px);
+  }
+
+  header {
+    margin-top: 18px;
+    padding: 38px 0 72px;
+  }
+
+  header::after {
+    bottom: 38px;
+  }
+
+  main {
+    padding-bottom: 54px;
+  }
+
+  .project {
+    margin-bottom: 58px;
+  }
+
+  h2 {
+    gap: 15px;
+    margin-bottom: 14px;
+    font-size: 23px;
+  }
+
+  .project a {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(31, 28, 20, 0.06);
+  }
+
+}
