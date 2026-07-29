@@ -1,6 +1,6 @@
 # Tyler Squibb — Portfolio
 
-A simple portfolio linking to five selected live websites.
+A simple portfolio linking to six selected live websites.
 
 ## Run locally
 
